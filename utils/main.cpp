@@ -1,63 +1,6 @@
-#include <iostream>
-#include <math.h>
-#include <string.h>
-#include <string>
-using namespace std;
+#include "main.hpp"
 
-#include "utils\\utils.hpp"
-#include "utils\\timer.hpp"
 
-struct img_infos
-{
-    float feature[32];
-    float distance;
-    string label;
-};
-
-float distance_of_two_array(int array1[], int array2[], int n);
-void distance_mat(int array[], int save[], int matrix[][28], int n);
-float mean_cal(int x, int y, float submatrix[][28]);
-float std_cal(int x, int y, float submatix[][28]);
-void feature_cal(float matrix[][28], float array[32]);
-void training(img_infos array[1000]);
-void exploring(string label, int pic_num);
-string test(img_infos array[1000], string label, int pic_num, int knum);
-int random_generator();
-//------------------------------------------------------------------------------
-
-int main()
-{
-    img_infos array[1000];
-    Timer timer;
-    string image_path;
-    // std::string image_path = interpolation("data\\mnist", "train", "7");
-    float img[IMAGE_SIZE][IMAGE_SIZE];
-    // load_image(image_path, 100, img);
-    // string to_string (int num);
-    /*for (int i = 0; i < IMAGE_SIZE; i++)
-    {
-        for (int j = 0; j < IMAGE_SIZE; j++)
-        {
-            std::cout << img[i][j] << " ";
-        }
-        std::cout << std::endl;
-    }*/
-    string label;
-    int index;
-    int knum;
-    /*cin >> label;
-    cin >> index;
-    cin >> knum;*/
-    // exploring(label, index);
-    // cout << test(array, label, index, knum) << endl;
-    //training(array);
-    /*feature_cal(img, array);
-    for (int i = 0; i < 32; i++)
-    {
-        std::cout << array[i] << " ";
-    }*/
-    return 0;
-}
 
 //*****************************distance of two array*********************************
 float distance_of_two_array(float array1[], float array2[], int n)
